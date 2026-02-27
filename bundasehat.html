@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Najma - Portfolio Details</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: SnapFolio
+  * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
+  * Updated: Jul 21 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="portfolio-details-page">
+    <style>
+      body {
+        padding-top: 80px !important; /* Memberi ruang agar hero tidak tertutup navbar */
+      }
+      #header {
+        display: none !important; /* Mematikan sidebar asli template */
+      }
+      .main {
+        margin-left: 0 !important; /* Menghapus paksa space kosong di kiri */
+        width: 100% !important;
+      }
+    </style>
+
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="
+        background: #1a1a1a;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        padding: 15px 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+      "
+    >
+      <div class="container" style="padding-left: 0">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNavbar"
+          style="border: none; filter: invert(1); margin-left: 15px"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="topNavbar">
+          <ul
+            class="navbar-nav me-auto"
+            style="gap: 5px; flex-direction: row; align-items: center"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="index.html"
+                style="
+                  color: #ffffff !important;
+                  font-weight: 500;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 8px 15px 8px 0;
+                "
+              >
+                <i class="bi bi-house"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="index.html#portfolio"
+                style="
+                  color: #a0a0a0 !important;
+                  font-weight: 500;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 8px 15px;
+                "
+              >
+                <i class="bi bi-images"></i> Portfolio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="index.html#resume"
+                style="
+                  color: #a0a0a0 !important;
+                  font-weight: 500;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 8px 15px;
+                "
+              >
+                <i class="bi bi-file-earmark-text"></i> Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header
+      id="header"
+      class="header dark-background d-flex flex-column justify-content-center"
+    >
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+    </header>
+
+    <main class="main">
+      <!-- Portfolio Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper init-swiper">
+                <script type="application/json" class="swiper-config">
+                  {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                      "delay": 5000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                      "el": ".swiper-pagination",
+                      "type": "bullets",
+                      "clickable": true
+                    }
+                  }
+                </script>
+
+                <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/img/portfolio/bundasehat1.png"
+                      alt="Portfolio Image"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/img/portfolio/bundasehat2.png"
+                      alt="Portfolio Image"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/img/portfolio/bundasehat3.png"
+                      alt="Portfolio Image"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div
+                class="portfolio-info"
+                data-aos="fade-left"
+                data-aos-delay="200"
+              >
+                <h3>BundaSehat</h3>
+                <p
+                  class="award-badge"
+                  style="
+                    color: #d4af37;
+                    font-weight: 700;
+                    margin-top: -10px;
+                    margin-bottom: 15px;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <i class="bi bi-trophy-fill"></i> 2nd Place HackHERthon 2025
+                </p>
+                <ul>
+                  <li>
+                    <strong>Role :</strong> Product Manager & UI/UX Designer
+                  </li>
+                  <li><strong>Timeline :</strong> 23 Nov - 14 Dec 2025</li>
+                  <li><strong>Platform :</strong> Website Mobile View</li>
+                  <li><strong>Tools :</strong> Figma • Canva • JIRA</li>
+                  <li><strong>Context :</strong> HackHERthon 2025</li>
+                  <li>
+                    <strong>Project URL</strong>:
+                    <a
+                      href="https://syahba.github.io/hackherthon-bundasehat/"
+                      target="_blank"
+                      >bit.ly/BundaSehatMVP</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div
+                class="portfolio-description"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <h2>Project Overview</h2>
+                <p>
+                  BundaSehat is a digital health platform aimed at reducing
+                  Indonesia’s Maternal Mortality Rate by bridging healthcare
+                  gaps in rural areas. I led product discovery to uncover pain
+                  points for pregnant women, focusing on limited medical
+                  information and high risks from delayed emergency care.
+                  Insights guided a solution with self-monitoring tools and
+                  localized health education for safer pregnancies.
+                </p>
+                <p>
+                  As Product Manager, I turned user insights into actionable
+                  stories and managed the MVP scope for a focused, high-impact
+                  launch. I prioritized features by balancing technical
+                  feasibility with urgent needs. Post-launch, I developed a
+                  roadmap—including AI symptom detection and emergency
+                  mapping—to grow the platform into a comprehensive life-saving
+                  ecosystem.
+                </p>
+
+                <div class="features mt-4">
+                  <h3>Key Features</h3>
+                  <div class="row gy-3">
+                    <div class="col-md-6">
+                      <div
+                        class="feature-item"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                      >
+                        <i class="bi bi-clipboard2-pulse-fill"></i>
+                        <h4>Pregnancy Daily Check-Up</h4>
+                        <p>
+                          A self-monitoring tool for daily tracking of
+                          nutrition, energy, and mood, designed to detect
+                          potential health risks early and guide users toward
+                          proactive steps for maintaining overall well-being.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div
+                        class="feature-item"
+                        data-aos="fade-up"
+                        data-aos-delay="500"
+                      >
+                        <i class="bi bi-book-half"></i>
+                        <h4>Mind-Map Library</h4>
+                        <p>
+                          A visual repository that simplifies complex medical
+                          data into easy-to-understand guides covering
+                          nutrition, safe herbal remedies, and pregnancy danger
+                          signs.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div
+                        class="feature-item"
+                        data-aos="fade-up"
+                        data-aos-delay="600"
+                      >
+                        <i class="bi bi-lightbulb-fill"></i>
+                        <h4>Personalized Health Insights</h4>
+                        <p>
+                          A scientifically proven recommendation engine that
+                          provides practical health advice and locally relevant
+                          meal suggestions, tailored to the user’s daily
+                          check-up results for improved well-being.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div
+                        class="feature-item"
+                        data-aos="fade-up"
+                        data-aos-delay="700"
+                      >
+                        <i class="bi bi-shield-exclamation"></i>
+                        <h4>Health Scoring & Flagging</h4>
+                        <p>
+                          A data-driven system that turns daily check-ups into a
+                          health score, using color-coded alerts (Safe, Caution,
+                          Danger) to highlight risks and prompt timely medical
+                          care.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Details Section -->
+    </main>
+
+    <footer
+      id="footer"
+      class="footer"
+      style="margin-left: 0; padding-left: 0; width: 100%; text-align: center"
+    >
+      <div class="container">
+        <div class="copyright">
+          <p>© <strong class="px-0 sitename">2026 Najma Noorfitri</strong></p>
+        </div>
+        <div class="credits">
+          Designed by
+          <a
+            href="https://bootstrapmade.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >BootstrapMade</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
