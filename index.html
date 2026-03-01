@@ -492,6 +492,48 @@
                 </div>
               </div>
 
+              <!-- START ATTACHMENTS -->
+
+      <!-- EDU, EXP, ATTACH -->
+      <section
+        id="resume"
+        class="resume section"
+        style="background: #121212; color: #fff; padding: 60px 0"
+      >
+        <!-- ===== CSS KHUSUS SECTION INI ===== -->
+        <style>
+          .achievement-card {
+            transition: all 0.35s ease;
+            cursor: pointer;
+          }
+
+          .achievement-card:hover {
+            transform: scale(1.04) translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+          }
+
+          /* === CAROUSEL ARROW BIAR KELIATAN === */
+          .carousel-control-prev-icon,
+          .carousel-control-next-icon {
+            filter: invert(70%);
+            width: 2.2rem;
+            height: 2.2rem;
+            background-size: 70% 70%;
+            border-radius: 50%;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.75);
+            opacity: 1;
+          }
+
+          .carousel-control-prev,
+          .carousel-control-next {
+            width: 56px;
+          }
+        </style>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-12">
+              <!-- ===== EDUCATION ===== -->
               <div
                 class="resume-section mb-5"
                 style="
@@ -499,13 +541,11 @@
                   border-radius: 20px;
                   padding: 30px;
                   border: 1px solid rgba(255, 255, 255, 0.1);
+                  backdrop-filter: blur(10px);
                 "
-                data-aos="fade-up"
-                data-aos-delay="200"
               >
                 <h3
                   style="
-                    color: #fff;
                     font-weight: 700;
                     margin-bottom: 25px;
                     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
@@ -513,155 +553,61 @@
                     display: inline-block;
                   "
                 >
-                  <i class="bi bi-award me-2"></i>Achievement
+                  <i class="bi bi-mortarboard me-2"></i>Education
+                </h3>
+
+                <div style="padding-left: 20px; border-left: 3px solid #fff">
+                  <h4>Undergraduate in Information Systems</h4>
+                  <h5
+                    style="
+                      background: rgba(255, 255, 255, 0.1);
+                      display: inline-block;
+                      padding: 5px 15px;
+                      border-radius: 50px;
+                    "
+                  >
+                    2023 - 2027 (Expected)
+                  </h5>
+                  <p><i class="bi bi-building"></i> Sangga Buana University</p>
+                  <p>GPA: <strong>4.00/4.00</strong></p>
+                </div>
+              </div>
+
+              <!-- ===== ACHIEVEMENT ===== -->
+              <div
+                class="resume-section"
+                style="
+                  background: rgba(255, 255, 255, 0.05);
+                  border-radius: 20px;
+                  padding: 30px;
+                  border: 1px solid rgba(255, 255, 255, 0.1);
+                "
+              >
+                <h3
+                  style="
+                    font-weight: 700;
+                    margin: 0 auto 25px;
+                    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+                    padding-bottom: 10px;
+                    display: table;
+                  "
+                >
+                  <i class="bi bi-award me-2"></i>Achievements
+                  <i class="bi bi-award me-2"></i>
                 </h3>
                 <div class="row">
+                  <!-- CARD 1 -->
                   <div class="col-md-6 mb-3">
                     <div
-                      style="
-                        background: rgba(255, 255, 255, 0.03);
-                        padding: 20px;
-                        border-radius: 15px;
-                        border: 1px solid rgba(255, 255, 255, 0.05);
+                      class="achievement-card"
+                      data-bs-toggle="modal"
+                      data-bs-target="#achievementModal"
+                      onclick="
+                        openAchievement([
+                          'assets/img/achievements/hackherthon1.png',
+                          'assets/img/achievements/hackherthon2.jpg',
+                        ])
                       "
-                    >
-                      <h4
-                        style="
-                          font-size: 1.1rem;
-                          color: #d4af37;
-                          font-weight: 700;
-                        "
-                      >
-                        <i
-                          class="bi bi-trophy-fill"
-                          style="margin-right: 8px"
-                        ></i>
-                        2nd Place HackHERthon
-                      </h4>
-                      <span
-                        style="
-                          color: #aaa;
-                          font-size: 0.85rem;
-                          font-weight: bold;
-                          display: block;
-                          margin-top: 5px;
-                        "
-                      >
-                        Generation Girl Tangerang | National 2025
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 mb-3">
-                    <div
-                      style="
-                        background: rgba(255, 255, 255, 0.03);
-                        padding: 20px;
-                        border-radius: 15px;
-                        border: 1px solid rgba(255, 255, 255, 0.05);
-                      "
-                    >
-                      <h4
-                        style="
-                          font-size: 1.1rem;
-                          color: #d4af37;
-                          font-weight: 700;
-                        "
-                      >
-                        <i
-                          class="bi bi-award-fill"
-                          style="margin-right: 8px"
-                        ></i>
-                        Best Problem Solving Design
-                      </h4>
-                      <span
-                        style="
-                          color: #aaa;
-                          font-size: 0.85rem;
-                          font-weight: bold;
-                          display: block;
-                          margin-top: 5px;
-                        "
-                      >
-                        Electives UI/UX Series | National 2025
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 mb-3">
-                    <div
-                      style="
-                        background: rgba(255, 255, 255, 0.03);
-                        padding: 20px;
-                        border-radius: 15px;
-                        border: 1px solid rgba(255, 255, 255, 0.05);
-                      "
-                    >
-                      <h4
-                        style="
-                          font-size: 1.1rem;
-                          color: #d4af37;
-                          font-weight: 700;
-                        "
-                      >
-                        <i
-                          class="bi bi-trophy-fill"
-                          style="margin-right: 8px"
-                        ></i>
-                        2nd Place English Speech
-                      </h4>
-                      <span
-                        style="
-                          color: #aaa;
-                          font-size: 0.85rem;
-                          font-weight: bold;
-                          display: block;
-                          margin-top: 5px;
-                        "
-                      >
-                        Annual SAEED National Competition | National 2025
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 mb-3">
-                    <div
-                      style="
-                        background: rgba(255, 255, 255, 0.03);
-                        padding: 20px;
-                        border-radius: 15px;
-                        border: 1px solid rgba(255, 255, 255, 0.05);
-                      "
-                    >
-                      <h4
-                        style="
-                          font-size: 1.1rem;
-                          color: #d4af37;
-                          font-weight: 700;
-                        "
-                      >
-                        <i
-                          class="bi bi-award-fill"
-                          style="margin-right: 8px"
-                        ></i>
-                        Finalist Top 10 English Speech
-                      </h4>
-                      <span
-                        style="
-                          color: #aaa;
-                          font-size: 0.85rem;
-                          font-weight: bold;
-                          display: block;
-                          margin-top: 5px;
-                        "
-                      >
-                        Padjadjaran English Competition | International 2025
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 mx-auto mb-3">
-                    <div
                       style="
                         background: rgba(255, 255, 255, 0.03);
                         padding: 20px;
@@ -672,36 +618,236 @@
                     >
                       <h4
                         style="
-                          font-size: 1.1rem;
                           color: #d4af37;
-                          font-weight: 700;
+                          font-size: 1.15rem;
+                          font-weight: 1000;
                         "
                       >
-                        <i
-                          class="bi bi-patch-check-fill"
-                          style="margin-right: 8px"
-                        ></i>
-                        Most Outstanding Innovation
+                        <i class="bi bi-trophy-fill me-2"></i>2nd Place
+                        HackHERthon
                       </h4>
-                      <span
-                        style="
-                          color: #aaa;
-                          font-size: 0.85rem;
-                          font-weight: bold;
-                          display: block;
-                          margin-top: 5px;
-                        "
+                      <span style="color: #aaa; font-size: 0.85rem"
+                        >Generation Girl Tangerang | National 2025</span
                       >
-                        Web Programming Course | Classmate 2025
-                      </span>
                     </div>
                   </div>
+
+                  <!-- CARD 2 -->
+                  <div class="col-md-6 mb-3">
+                    <div
+                      class="achievement-card"
+                      data-bs-toggle="modal"
+                      data-bs-target="#achievementModal"
+                      onclick="
+                        openAchievement([
+                          'assets/img/achievements/asnc1.png',
+                          'assets/img/achievements/asnc2.jpg',
+                        ])
+                      "
+                      style="
+                        background: rgba(255, 255, 255, 0.03);
+                        padding: 20px;
+                        border-radius: 15px;
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        text-align: center;
+                      "
+                    >
+                      <h4
+                        style="
+                          color: #d4af37;
+                          font-size: 1.15rem;
+                          font-weight: 1000;
+                        "
+                      >
+                        <i class="bi bi-trophy-fill me-2"></i>2nd Place English
+                        Speech
+                      </h4>
+                      <span style="color: #aaa; font-size: 0.85rem"
+                        >Annual SAEED National Competition | National 2025</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- CARD 3 -->
+                  <div class="col-md-6 mb-3">
+                    <div
+                      class="achievement-card"
+                      data-bs-toggle="modal"
+                      data-bs-target="#achievementModal"
+                      onclick="
+                        openAchievement([
+                          'assets/img/achievements/uiux2.png',
+                          'assets/img/achievements/uiux1.png',
+                        ])
+                      "
+                      style="
+                        background: rgba(255, 255, 255, 0.03);
+                        padding: 20px;
+                        border-radius: 15px;
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        text-align: center;
+                      "
+                    >
+                      <h4
+                        style="
+                          color: #d4af37;
+                          font-size: 1.15rem;
+                          font-weight: 1000;
+                        "
+                      >
+                        <i class="bi bi-award-fill me-2"></i>Best
+                        Problem-Solving Design
+                      </h4>
+                      <span style="color: #aaa; font-size: 0.85rem"
+                        >Electives UI/UX Series | National 2025</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- CARD 4 -->
+                  <div class="col-md-6 mb-3">
+                    <div
+                      class="achievement-card"
+                      data-bs-toggle="modal"
+                      data-bs-target="#achievementModal"
+                      onclick="
+                        openAchievement([
+                          'assets/img/achievements/data2.jpg',
+                          'assets/img/achievements/data1.png',
+                        ])
+                      "
+                      style="
+                        background: rgba(255, 255, 255, 0.03);
+                        padding: 20px;
+                        border-radius: 15px;
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        text-align: center;
+                      "
+                    >
+                      <h4
+                        style="
+                          color: #d4af37;
+                          font-size: 1.15rem;
+                          font-weight: 1000;
+                        "
+                      >
+                        <i class="bi bi-award-fill me-2"></i>Best Dashboard
+                        Presentation
+                      </h4>
+                      <span style="color: #aaa; font-size: 0.85rem"
+                        >Electives Data Series | National 2025</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- CARD 5 -->
+                  <div class="col-md-6 mx-auto mb-3">
+                    <div
+                      class="achievement-card"
+                      data-bs-toggle="modal"
+                      data-bs-target="#achievementModal"
+                      onclick="
+                        openAchievement([
+                          'assets/img/achievements/pec1.png',
+                          'assets/img/achievements/pec2.jpg',
+                        ])
+                      "
+                      style="
+                        background: rgba(255, 255, 255, 0.03);
+                        padding: 20px;
+                        border-radius: 15px;
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        text-align: center;
+                      "
+                    >
+                      <h4
+                        style="
+                          color: #d4af37;
+                          font-size: 1.15rem;
+                          font-weight: 1000;
+                        "
+                      >
+                        <i class="bi bi-trophy-fill me-2"></i>Top 10 Finalist
+                        English Speech
+                      </h4>
+                      <span style="color: #aaa; font-size: 0.85rem"
+                        >Padjadjaran English Competition | International
+                        2025</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- DUPLIKASI CARD DI SINI (tinggal ganti teks & gambar) -->
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- ===== MODAL ===== -->
+        <div class="modal fade" id="achievementModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div
+              class="modal-content"
+              style="
+                background: #121212;
+                border-radius: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+              "
+            >
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Achievement Gallery</h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div id="achievementCarousel" class="carousel slide">
+                  <div class="carousel-inner" id="carouselContent"></div>
+
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#achievementCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#achievementCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== JS ===== -->
+        <script>
+          function openAchievement(images) {
+            const carousel = document.getElementById("carouselContent");
+            carousel.innerHTML = "";
+
+            images.forEach((img, index) => {
+              carousel.innerHTML += `
+          <div class="carousel-item ${index === 0 ? "active" : ""}">
+            <img src="${img}" class="d-block w-100"
+              style="border-radius:15px; max-height:500px; object-fit:contain;">
+          </div>
+        `;
+            });
+          }
+        </script>
       </section>
+
+      <!-- END ATTACHMENTS -->
     </main>
 
     <footer
