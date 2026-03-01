@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Najma - StoryShelf</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: SnapFolio
+  * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
+  * Updated: Jul 21 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="portfolio-details-page">
+    <style>
+      body {
+        padding-top: 80px !important; /* Memberi ruang agar hero tidak tertutup navbar */
+      }
+      #header {
+        display: none !important; /* Mematikan sidebar asli template */
+      }
+      .main {
+        margin-left: 0 !important; /* Menghapus paksa space kosong di kiri */
+        width: 100% !important;
+      }
+    </style>
+
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="
+        background: #1a1a1a;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        padding: 15px 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+      "
+    >
+      <div class="container" style="padding-left: 0">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNavbar"
+          style="border: none; filter: invert(1); margin-left: 15px"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="topNavbar">
+          <ul
+            class="navbar-nav me-auto"
+            style="gap: 5px; flex-direction: row; align-items: center"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="index.html"
+                style="
+                  color: #ffffff !important;
+                  font-weight: 500;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 8px 15px 8px 0;
+                "
+              >
+                <i class="bi bi-house"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="index.html#portfolio"
+                style="
+                  color: #a0a0a0 !important;
+                  font-weight: 500;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 8px 15px;
+                "
+              >
+                <i class="bi bi-images"></i> Portfolio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="index.html#resume"
+                style="
+                  color: #a0a0a0 !important;
+                  font-weight: 500;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 8px 15px;
+                "
+              >
+                <i class="bi bi-file-earmark-text"></i> Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header
+      id="header"
+      class="header dark-background d-flex flex-column justify-content-center"
+    >
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+    </header>
+
+    <main class="main">
+      <!-- Portfolio Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper init-swiper">
+                <script type="application/json" class="swiper-config">
+                  {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                      "delay": 5000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                      "el": ".swiper-pagination",
+                      "type": "bullets",
+                      "clickable": true
+                    }
+                  }
+                </script>
+
+                <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/img/portfolio/storyshelf1.png"
+                      alt="Portfolio Image"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/img/portfolio/storyshelf2.png"
+                      alt="Portfolio Image"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img
+                      src="assets/img/portfolio/storyshelf3.png"
+                      alt="Portfolio Image"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div
+                class="portfolio-info"
+                data-aos="fade-left"
+                data-aos-delay="200"
+              >
+                <h3>StoryShelf</h3>
+                <ul>
+                  <li><strong>Role :</strong> Product & UI/UX Designer</li>
+                  <li><strong>Timeline :</strong> Feb - Apr 2025</li>
+                  <li><strong>Platform :</strong> Mobile App</li>
+                  <li><strong>Tools :</strong> Figma • Canva • Maze</li>
+                  <li><strong>Context :</strong> Dicoding UI/UX Project</li>
+                  <li>
+                    <strong>Project URL</strong>:
+                    <a
+                      href="https://www.figma.com/proto/IfqpyWTcVLcqXpNacQDQ82/Mockup---StoryShelf?node-id=2183-4224&p=f&t=56j7M9hV3ut1hE0N-1&scaling=scale-down&content-scaling=fixed&page-id=2183%3A3301&starting-point-node-id=2183%3A4224"
+                      target="_blank"
+                      >bit.ly/StoryShelfPrototype</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div
+                class="portfolio-description"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <h2>Project Overview</h2>
+                <p>
+                  StoryShelf is a mobile app concept designed to help users
+                  create aesthetic movie and book reviews effortlessly while
+                  organizing key insights and quotes in a structured way. Acting
+                  as Product Strategist and UI/UX Designer, I defined the
+                  product direction based on user research that revealed
+                  frustration with time-consuming manual editing, unorganized
+                  notes, and difficulty deciding what to watch or read next.
+                </p>
+                <p>
+                  I led end-to-end product strategy and design, from research
+                  and problem framing to user flows and high-fidelity UI.
+                  Insights from surveys, interviews, and competitive analysis
+                  guided feature prioritization, interaction design, and
+                  usability improvements. The final solution balances aesthetic
+                  expression with functional clarity, enabling users to
+                  document, revisit, and share their experiences seamlessly.
+                </p>
+
+                <div class="features mt-4">
+                  <h3>Key Features</h3>
+                  <div class="row gy-3">
+                    <div class="col-md-6">
+                      <div
+                        class="feature-item"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                      >
+                        <i class="bi bi-brush-fill"></i>
+                        <h4>Aesthetic Review Templates</h4>
+                        <p>
+                          Ready-to-use and customizable templates that help
+                          users create visually appealing movie or book reviews
+                          without manual layout editing, reducing effort while
+                          maintaining a personal creative touch.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div
+                        class="feature-item"
+                        data-aos="fade-up"
+                        data-aos-delay="500"
+                      >
+                        <i class="bi bi-journal-bookmark-fill"></i>
+                        <h4>Insight & Quote Organization</h4>
+                        <p>
+                          A structured note system that allows users to save key
+                          insights and favorite quotes with tags and contextual
+                          search, making information easy to retrieve without
+                          endless scrolling.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div
+                        class="feature-item"
+                        data-aos="fade-up"
+                        data-aos-delay="600"
+                      >
+                        <i class="bi bi-shuffle"></i>
+                        <h4>Random Picker & Recommendations</h4>
+                        <p>
+                          A discovery feature that suggests movies or books
+                          through a random picker and refreshed recommendations,
+                          helping users decide what to watch or read next with
+                          less decision fatigue.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div
+                        class="feature-item"
+                        data-aos="fade-up"
+                        data-aos-delay="700"
+                      >
+                        <i class="bi bi-bar-chart-fill"></i>
+                        <h4>Reading & Watching Statistics</h4>
+                        <p>
+                          A visual recap that shows users their watching and
+                          reading history, helping them track habits, reflect on
+                          preferences, and gain meaningful insights from their
+                          activity over time.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Details Section -->
+    </main>
+
+    <footer
+      id="footer"
+      class="footer"
+      style="margin-left: 0; padding-left: 0; width: 100%; text-align: center"
+    >
+      <div class="container">
+        <div class="copyright">
+          <p>© <strong class="px-0 sitename">2026 Najma Noorfitri</strong></p>
+        </div>
+        <div class="credits">
+          Designed by
+          <a
+            href="https://bootstrapmade.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >BootstrapMade</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
