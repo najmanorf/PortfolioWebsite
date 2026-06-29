@@ -59,6 +59,73 @@
         margin-left: 0 !important; /* Menghapus paksa space kosong di kiri */
         width: 100% !important;
       }
+
+      .portfolio-details .container {
+        max-width: 1180px;
+      }
+
+      .overview-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .overview-card {
+        height: 100%;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        padding: 22px;
+      }
+
+      .overview-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #d4af37;
+      }
+
+      .overview-card p {
+        margin: 0;
+        color: #d0d0d0;
+        font-size: 0.92rem;
+      }
+
+      .project-info-card,
+      .feature-card,
+      .feature-image-card {
+        background: #202020;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+        border-radius: 14px;
+      }
+
+      .feature-image-card {
+        padding: 14px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .feature-image-card a {
+        display: block;
+        width: 100%;
+        cursor: zoom-in;
+      }
+
+      .feature-image-card img {
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      @media (max-width: 991px) {
+        .overview-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
 
     <nav
@@ -152,120 +219,306 @@
     <main class="main">
       <!-- Portfolio Details Section -->
       <section id="portfolio-details" class="portfolio-details section">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div
+          class="container px-3 px-lg-2"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div class="row gy-4">
-            <div class="col-lg-8">
-              <div class="portfolio-details-slider swiper init-swiper">
-                <script type="application/json" class="swiper-config">
-                  {
-                    "loop": true,
-                    "speed": 600,
-                    "autoplay": {
-                      "delay": 5000
-                    },
-                    "slidesPerView": "auto",
-                    "pagination": {
-                      "el": ".swiper-pagination",
-                      "type": "bullets",
-                      "clickable": true
-                    }
-                  }
-                </script>
-
-                <div class="swiper-wrapper align-items-center">
-                  <div class="swiper-slide">
-                    <img
-                      src="assets/img/portfolio/borma1.png"
-                      alt="Portfolio Image"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="assets/img/portfolio/borma2.png"
-                      alt="Portfolio Image"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="assets/img/portfolio/borma3.png"
-                      alt="Portfolio Image"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-
-            <div class="col-lg-4">
+            <div class="col-lg-4 d-flex">
               <div
-                class="portfolio-info"
+                class="portfolio-info w-100 project-info-card"
                 data-aos="fade-left"
-                data-aos-delay="200"
+                data-aos-delay="250"
+                style="
+                  min-height: 360px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  background: #202020;
+                  border: 1px solid rgba(255, 255, 255, 0.14);
+                  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+                  border-radius: 14px;
+                  padding: 30px;
+                "
               >
-                <h3>Borma Dago - Revamping</h3>
-                <ul>
-                  <li><strong>Role :</strong> Product Manager</li>
-                  <li><strong>Timeline :</strong> June 2025</li>
-                  <li><strong>Platform :</strong> Mobile App</li>
-                  <li><strong>Tools :</strong> Figma • Canva • Maze</li>
-                  <li><strong>Context :</strong> UI/UX Course Project</li>
+                <div>
+                  <h3
+                    style="
+                      margin-bottom: 4px;
+                      padding-bottom: 0;
+                      border-bottom: none;
+                    "
+                  >
+                    Borma Dago
+                  </h3>
+
+                  <p
+                    style="
+                      color: #bdbdbd;
+                      font-size: 0.9rem;
+                      margin: 0;
+                      padding-bottom: 12px;
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+                    "
+                  >
+                    Retail Ordering Platform
+                  </p>
+                </div>
+
+                <ul style="margin: 0; padding: 0; list-style: none">
+                  <li><strong>Role :</strong> Product & UI/UX Designer</li>
+                  <li><strong>Team :</strong> 3 Members</li>
+                  <li><strong>Date :</strong> June 2025</li>
                   <li>
-                    <strong>Project URL</strong>:
+                    <strong>Prototype :</strong>
                     <a
                       href="https://www.figma.com/proto/yybJSGhxzJdGYkH003HwY2/Borma-Prototype?node-id=4-81&t=Lcvyui9U2BhM5O6N-1&starting-point-node-id=4%3A81"
                       target="_blank"
-                      >bit.ly/BormaPrototype</a
+                      style="color: #589bff; text-decoration: underline"
                     >
+                      bit.ly/BormaPrototype
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
 
+            <!-- Project Overview + Info -->
+            <div class="col-lg-8">
+              <div
+                class="portfolio-description h-100"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                style="
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin-bottom: 26px;
+                  "
+                >
+                  Project Overview
+                </h2>
+
+                <div class="overview-grid">
+                  <div class="overview-card">
+                    <h4>
+                      <i class="bi bi-exclamation-triangle-fill"></i>
+                      Problem
+                    </h4>
+                    <p>
+                      The Borma Dago app had usability gaps in navigation,
+                      system feedback, and information hierarchy, making the
+                      experience less intuitive.
+                    </p>
+                  </div>
+
+                  <div class="overview-card">
+                    <h4>
+                      <i class="bi bi-people-fill"></i>
+                      Target Users
+                    </h4>
+                    <p>
+                      Borma Dago customers who use the mobile app to browse
+                      products, check promotions, and make shopping decisions
+                      more efficiently.
+                    </p>
+                  </div>
+
+                  <div class="overview-card">
+                    <h4>
+                      <i class="bi bi-lightbulb-fill"></i>
+                      Solution
+                    </h4>
+                    <p>
+                      A revamp based on heuristic evaluation, focusing on
+                      clearer navigation, stronger system feedback, and improved
+                      hierarchy.
+                    </p>
+                  </div>
+
+                  <div class="overview-card">
+                    <h4>
+                      <i class="bi bi-bullseye"></i>
+                      Product Goal
+                    </h4>
+                    <p>
+                      Improve usability, shopping confidence, and product
+                      discovery by aligning the interface with user behavior and
+                      retail business needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature Showcase -->
             <div class="col-lg-12">
               <div
-                class="portfolio-description"
+                class="features mt-5"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
-                <h2>Project Overview</h2>
-                <p>
-                  This project focuses on evaluating and improving the digital
-                  shopping experience of Borma Dago App using heuristic
-                  evaluation approach. Acting as Product Manager, I conducted a
-                  usability evaluation based on Nielsen’s Heuristic Evaluation
-                  to identify interface and interaction issues that affected
-                  ease of navigation, product discovery, and user confidence
-                  during shopping.
-                </p>
-                <p>
-                  The evaluation revealed usability gaps related to unclear
-                  system feedback, inconsistent navigation, and inefficient
-                  information hierarchy. I translated these findings into
-                  prioritized improvement recommendations, ensuring the proposed
-                  solutions aligned with user behavior, retail business goals,
-                  and practical implementation constraints.
+                <h2
+                  style="
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin-bottom: 26px;
+                  "
+                >
+                  Feature Showcase
+                </h2>
+                <p
+                  style="color: #bdbdbd; margin-top: -6px; margin-bottom: 28px"
+                >
+                  Each feature was designed based on a specific user pain point
+                  identified during product discovery.
                 </p>
 
-                <div class="features mt-4">
-                  <h3>Key Improvements</h3>
-                  <div class="row gy-3">
-                    <div class="col-md-6">
-                      <div
-                        class="feature-item"
-                        data-aos="fade-up"
-                        data-aos-delay="400"
+                <!-- Feature 01 -->
+                <div class="row gy-4 align-items-stretch mb-4">
+                  <div class="col-lg-5">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/borma1.png"
+                        class="glightbox"
                       >
-                        <i class="bi bi-grid-fill"></i>
-                        <h4>Category-Based Product Navigation</h4>
-                        <p>
+                        <img
+                          src="assets/img/portfolio/borma1.png"
+                          alt="Category-Based Product Navigation screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                        />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-7">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="400"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-grid-fill"
+                            style="
+                              color: #ffffff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #ffffff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                          >
+                            01
+                          </span>
+                          <h4 style="margin: 0">
+                            Category-Based Product Navigation
+                          </h4>
+                        </div>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Problem
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
+                          Users may feel confused when browsing daily
+                          necessities if product categories are unclear or
+                          inconsistent.
+                        </p>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Feature Solution
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
                           Products are organized into clear and consistent
                           categories to help users browse items more
                           intuitively. This improvement aligns with users’
@@ -274,33 +527,284 @@
                         </p>
                       </div>
                     </div>
-
-                    <div class="col-md-6">
+                  </div>
+                </div>
+                <!-- Feature 02 -->
+                <div class="row gy-4 align-items-stretch mb-4">
+                  <div class="col-lg-7 order-lg-1 order-2">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="500"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
                       <div
-                        class="feature-item"
-                        data-aos="fade-up"
-                        data-aos-delay="500"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
                       >
-                        <i class="bi bi-tag-fill"></i>
-                        <h4>Clear Promotion & Price Visibility</h4>
-                        <p>
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-tag-fill"
+                            style="
+                              color: #ffffff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #ffffff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                          >
+                            02
+                          </span>
+                          <h4 style="margin: 0">
+                            Clear Promotion & Price Visibility
+                          </h4>
+                        </div>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Problem
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
                           Promotions, discounts, and price information are
                           displayed more prominently and consistently, ensuring
                           users immediately understand ongoing offers without
                           needing extra steps or assumptions.
                         </p>
                       </div>
-                    </div>
 
-                    <div class="col-md-6">
                       <div
-                        class="feature-item"
-                        data-aos="fade-up"
-                        data-aos-delay="600"
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
                       >
-                        <i class="bi bi-cart-check-fill"></i>
-                        <h4>Enhanced Cart Feedback</h4>
-                        <p>
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Feature Solution
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
+                          Promotions, discounts, and price information are
+                          displayed more clearly so users can immediately
+                          understand ongoing offers.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 order-lg-2 order-1">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/borma2.png"
+                        class="glightbox"
+                      >
+                        <img
+                          src="assets/img/portfolio/borma2.png"
+                          alt="Clear Promotion & Price Visibility screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Feature 03 -->
+                <div class="row gy-4 align-items-stretch mb-4">
+                  <div class="col-lg-5">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/borma3.png"
+                        class="glightbox"
+                      >
+                        <img
+                          src="assets/img/portfolio/borma3.png"
+                          alt="Enhanced Cart Feedback screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                        />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-7">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="600"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-cart-check-fill"
+                            style="
+                              color: #ffffff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #ffffff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                          >
+                            03
+                          </span>
+                          <h4 style="margin: 0">Enhanced Cart Feedback</h4>
+                        </div>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Problem
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
+                          Users may feel uncertain whether their add-to-cart or
+                          update actions have been successfully completed.
+                        </p>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Feature Solution
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
                           Users receive clear visual feedback when adding or
                           updating items in the cart, improving system
                           visibility and reducing uncertainty about whether
@@ -308,22 +812,149 @@
                         </p>
                       </div>
                     </div>
-
-                    <div class="col-md-6">
+                  </div>
+                </div>
+                <!-- Feature 04 -->
+                <div class="row gy-4 align-items-stretch">
+                  <div class="col-lg-7 order-lg-1 order-2">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="700"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
                       <div
-                        class="feature-item"
-                        data-aos="fade-up"
-                        data-aos-delay="700"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
                       >
-                        <i class="bi bi-info-circle-fill"></i>
-                        <h4>Improved Product Information Hierarchy</h4>
-                        <p>
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-info-circle-fill"
+                            style="
+                              color: #ffffff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #ffffff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                          >
+                            04
+                          </span>
+                          <h4 style="margin: 0">
+                            Improved Product Information Hierarchy
+                          </h4>
+                        </div>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Problem
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
+                          Users need quick access to key product details such as
+                          price, stock, and promotions before deciding what to
+                          buy.
+                        </p>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Feature Solution
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
                           Product details such as price, stock availability, and
                           promotions are structured in a clearer hierarchy,
                           enabling users to compare items quickly and make
                           confident purchase decisions.
                         </p>
                       </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 order-lg-2 order-1">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/borma3.png"
+                        class="glightbox"
+                      >
+                        <img
+                          src="assets/img/portfolio/borma3.png"
+                          alt="Improved Product Information Hierarchy screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -378,6 +1009,23 @@
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof GLightbox !== "undefined") {
+          document.querySelectorAll(".glightbox").forEach(function (item) {
+            GLightbox({
+              elements: [
+                {
+                  href: item.getAttribute("href"),
+                  type: "image",
+                },
+              ],
+            });
+          });
+        }
+      });
+    </script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
