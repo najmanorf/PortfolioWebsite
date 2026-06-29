@@ -59,6 +59,73 @@
         margin-left: 0 !important; /* Menghapus paksa space kosong di kiri */
         width: 100% !important;
       }
+
+      .portfolio-details .container {
+        max-width: 1180px;
+      }
+
+      .overview-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .overview-card {
+        height: 100%;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        padding: 22px;
+      }
+
+      .overview-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #d4af37;
+      }
+
+      .overview-card p {
+        margin: 0;
+        color: #d0d0d0;
+        font-size: 0.92rem;
+      }
+
+      .project-info-card,
+      .feature-card,
+      .feature-image-card {
+        background: #202020;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+        border-radius: 14px;
+      }
+
+      .feature-image-card {
+        padding: 14px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .feature-image-card a {
+        display: block;
+        width: 100%;
+        cursor: zoom-in;
+      }
+
+      .feature-image-card img {
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      @media (max-width: 991px) {
+        .overview-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
 
     <nav
@@ -152,192 +219,757 @@
     <main class="main">
       <!-- Portfolio Details Section -->
       <section id="portfolio-details" class="portfolio-details section">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div
+          class="container px-3 px-lg-2"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div class="row gy-4">
-            <div class="col-lg-8">
-              <div class="portfolio-details-slider swiper init-swiper">
-                <script type="application/json" class="swiper-config">
-                  {
-                    "loop": true,
-                    "speed": 600,
-                    "autoplay": {
-                      "delay": 5000
-                    },
-                    "slidesPerView": "auto",
-                    "pagination": {
-                      "el": ".swiper-pagination",
-                      "type": "bullets",
-                      "clickable": true
-                    }
-                  }
-                </script>
-
-                <div class="swiper-wrapper align-items-center">
-                  <div class="swiper-slide">
-                    <img
-                      src="assets/img/portfolio/dottolist1.png"
-                      alt="Portfolio Image"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="assets/img/portfolio/dottolist2.png"
-                      alt="Portfolio Image"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="assets/img/portfolio/dottolist3.png"
-                      alt="Portfolio Image"
-                      class="img-fluid"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-
-            <div class="col-lg-4">
+            <div class="col-lg-4 d-flex">
               <div
-                class="portfolio-info"
+                class="portfolio-info w-100 project-info-card"
                 data-aos="fade-left"
-                data-aos-delay="200"
+                data-aos-delay="250"
+                style="
+                  min-height: 360px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  background: #202020;
+                  border: 1px solid rgba(255, 255, 255, 0.14);
+                  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+                  border-radius: 14px;
+                  padding: 30px;
+                "
               >
-                <h3>Dotto List</h3>
-                <p
-                  class="award-badge"
-                  style="
-                    color: #d4af37;
-                    font-weight: 700;
-                    margin-top: -10px;
-                    margin-bottom: 15px;
-                    font-size: 0.9rem;
-                  "
-                >
-                  <i class="bi bi-trophy-fill"></i> Best Problem Solving Design
-                </p>
-                <ul>
+                <div>
+                  <h3
+                    style="
+                      margin-bottom: 4px;
+                      padding-bottom: 0;
+                      border-bottom: none;
+                    "
+                  >
+                    Dotto List
+                  </h3>
+
+                  <p
+                    style="
+                      color: #bdbdbd;
+                      font-size: 0.9rem;
+                      margin: 0;
+                      padding-bottom: 12px;
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+                    "
+                  >
+                    Collaborative Task Management
+                  </p>
+
+                  <p
+                    class="award-badge"
+                    style="
+                      color: #d4af37;
+                      font-weight: 700;
+                      margin-top: 16px;
+                      margin-bottom: 0;
+                      font-size: 0.9rem;
+                    "
+                  >
+                    <i class="bi bi-trophy-fill"></i> Best Problem Solving
+                    Design
+                  </p>
+                </div>
+
+                <ul style="margin: 0; padding: 0; list-style: none">
                   <li><strong>Role :</strong> Product & System Analyst</li>
-                  <li><strong>Timeline :</strong> Nov 2025 - Feb 2026</li>
-                  <li><strong>Platform :</strong> Website Desktop View</li>
-                  <li><strong>Tools :</strong> Figma • Canva • JIRA • Maze</li>
-                  <li><strong>Context :</strong> Electives Series 2025</li>
+                  <li><strong>Team :</strong> 4 Members</li>
+                  <li><strong>Date :</strong> Nov 2025 - Feb 2026</li>
                   <li>
-                    <strong>Project URL</strong>:
+                    <strong>Prototype :</strong>
                     <a
                       href="https://www.figma.com/proto/VBdDWeecr75SfBiCErNKyF/Dotto-List---draft-1?node-id=1-5&p=f&t=gefIa8rAHTkXSUF4-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A5"
                       target="_blank"
-                      >bit.ly/DottoPrototype</a
+                      style="color: #589bff; text-decoration: underline"
                     >
+                      bit.ly/Dotto ListMVP
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
 
+            <!-- Project Overview + Info -->
+            <div class="col-lg-8">
+              <div
+                class="portfolio-description h-100"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                style="
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin-bottom: 26px;
+                  "
+                >
+                  Project Overview
+                </h2>
+
+                <div class="overview-grid">
+                  <div class="overview-card">
+                    <h4>
+                      <i class="bi bi-exclamation-triangle-fill"></i>
+                      Problem
+                    </h4>
+                    <p>
+                      Working students often manage academic, work, and personal
+                      tasks across scattered tools, causing missed deadlines and
+                      unclear priorities.
+                    </p>
+                  </div>
+
+                  <div class="overview-card">
+                    <h4>
+                      <i class="bi bi-people-fill"></i>
+                      Target Users
+                    </h4>
+                    <p>
+                      Working students who need to manage study, work,
+                      organization, and personal responsibilities in one
+                      structured workspace.
+                    </p>
+                  </div>
+
+                  <div class="overview-card">
+                    <h4>
+                      <i class="bi bi-people-fill"></i>
+                      Solution
+                    </h4>
+                    <p>
+                      A collaborative task management platform with task
+                      categorization, priority tagging, shared boards, and
+                      progress tracking.
+                    </p>
+                  </div>
+
+                  <div class="overview-card">
+                    <h4>
+                      <i class="bi bi-bullseye"></i>
+                      Product Goal
+                    </h4>
+                    <p>
+                      Help users organize responsibilities, prioritize tasks,
+                      collaborate clearly, and monitor progress more
+                      effectively.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature Showcase -->
             <div class="col-lg-12">
               <div
-                class="portfolio-description"
+                class="features mt-5"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
-                <h2>Project Overview</h2>
-                <p>
-                  Dotto List is a collaborative task management web application
-                  built to help working students manage academic, professional,
-                  and personal tasks in one centralized platform. Acting as both
-                  Product Manager and System Analyst, I led product discovery
-                  through user interviews to identify core problems such as
-                  scattered task tracking, missed deadlines, poor
-                  prioritization, and limited collaboration in existing tools.
-                </p>
-                <p>
-                  I translated user insights into problem statements, user
-                  stories, and system requirements, then prioritized features by
-                  balancing user impact and technical feasibility. I
-                  collaborated closely with designers and engineers to define
-                  MVP scope, validate solutions through UAT, and ensure
-                  alignment from discovery to delivery. The final product
-                  focuses on clear prioritization, collaborative task boards,
-                  and progress dashboards to improve productivity for multi-role
-                  users.
+                <h2
+                  style="
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin-bottom: 26px;
+                  "
+                >
+                  Feature Showcase
+                </h2>
+                <p
+                  style="color: #bdbdbd; margin-top: -6px; margin-bottom: 28px"
+                >
+                  Each feature was designed based on a specific user pain point
+                  identified during product discovery.
                 </p>
 
-                <div class="features mt-4">
-                  <h3>Key Features</h3>
-                  <div class="row gy-3">
-                    <div class="col-md-6">
-                      <div
-                        class="feature-item"
-                        data-aos="fade-up"
-                        data-aos-delay="400"
+                <!-- Feature 01 -->
+                <div class="row gy-4 align-items-stretch mb-4">
+                  <div class="col-lg-5">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/dottolist1.png"
+                        class="glightbox"
                       >
-                        <i class="bi bi-list-check"></i>
-                        <h4>Category-Based Task Management</h4>
-                        <p>
+                        <img
+                          src="assets/img/portfolio/dottolist1.png"
+                          alt="Category-Based Task Management screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                        />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-7">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="400"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-list-check"
+                            style="
+                              color: #ffffff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #ffffff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                          >
+                            01
+                          </span>
+                          <h4 style="margin: 0">
+                            Category-Based Task Management
+                          </h4>
+                        </div>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Problem
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
+                          Users often track academic, work, and personal tasks
+                          separately, making responsibilities feel scattered and
+                          hard to manage.
+                        </p>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Feature Solution
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
                           Enables users to create tasks and organize them into
                           category lists, helping working students manage
-                          academic, work, and personal responsibilities more
-                          clearly in one unified workspace.
+                          academic, work, and personal responsibilities in one
+                          unified workspace.
                         </p>
                       </div>
                     </div>
+                  </div>
+                </div>
 
-                    <div class="col-md-6">
+                <!-- Feature 02 -->
+                <div class="row gy-4 align-items-stretch mb-4">
+                  <div class="col-lg-7 order-lg-1 order-2">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="500"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
                       <div
-                        class="feature-item"
-                        data-aos="fade-up"
-                        data-aos-delay="500"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
                       >
-                        <i class="bi bi-flag-fill"></i>
-                        <h4>Priority Tagging & Deadlines</h4>
-                        <p>
-                          A prioritization feature that uses tags and deadlines
-                          to help users identify urgent tasks, manage time more
-                          effectively, and stay focused on the most important
-                          task across various responsibilities each day.
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-flag-fill"
+                            style="
+                              color: #ffffff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #ffffff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                          >
+                            02
+                          </span>
+                          <h4 style="margin: 0">
+                            Priority Tagging & Deadlines
+                          </h4>
+                        </div>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Problem
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
+                          Users struggle to decide which tasks should be done
+                          first, causing urgent deadlines to be missed or
+                          deprioritized.
+                        </p>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Feature Solution
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
+                          Uses tags and deadlines to help users identify urgent
+                          tasks, manage time more effectively, and stay focused
+                          on the most important responsibilities each day.
                         </p>
                       </div>
                     </div>
+                  </div>
 
-                    <div class="col-md-6">
-                      <div
-                        class="feature-item"
-                        data-aos="fade-up"
-                        data-aos-delay="600"
+                  <div class="col-lg-5 order-lg-2 order-1">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/dottolist2.png"
+                        class="glightbox"
                       >
-                        <i class="bi bi-people-fill"></i>
-                        <h4>Collaborative Task Boards</h4>
-                        <p>
+                        <img
+                          src="assets/img/portfolio/dottolist2.png"
+                          alt="Priority Tagging & Deadlines screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Feature 03 -->
+                <div class="row gy-4 align-items-stretch mb-4">
+                  <div class="col-lg-5">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/dottolist3.png"
+                        class="glightbox"
+                      >
+                        <img
+                          src="assets/img/portfolio/dottolist3.png"
+                          alt="Collaborative Task Boards screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                        />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-7">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="600"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-people-fill"
+                            style="
+                              color: #ffffff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #ffffff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                          >
+                            03
+                          </span>
+                          <h4 style="margin: 0">Collaborative Task Boards</h4>
+                        </div>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Problem
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
+                          Team tasks often lack clear ownership and visibility,
+                          making collaboration less structured and harder to
+                          coordinate.
+                        </p>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Feature Solution
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
                           A shared task board that enables multiple users to
-                          manage tasks together, supporting collaboration
-                          through shared lists, role-based coordination, and
-                          clear task ownership.
+                          manage tasks together through shared lists, role-based
+                          coordination, and clear task ownership.
                         </p>
                       </div>
                     </div>
+                  </div>
+                </div>
 
-                    <div class="col-md-6">
+                <!-- Feature 04 -->
+                <div class="row gy-4 align-items-stretch">
+                  <div class="col-lg-7 order-lg-1 order-2">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="700"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
                       <div
-                        class="feature-item"
-                        data-aos="fade-up"
-                        data-aos-delay="700"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
                       >
-                        <i class="bi bi-bar-chart-fill"></i>
-                        <h4>Progress Dashboard & Tracking</h4>
-                        <p>
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-bar-chart-fill"
+                            style="
+                              color: #ffffff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #ffffff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                          >
+                            04
+                          </span>
+                          <h4 style="margin: 0">
+                            Progress Dashboard & Tracking
+                          </h4>
+                        </div>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Problem
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
+                          Users lack a quick way to know how much progress they
+                          made, which can reduce motivation and make
+                          productivity hard to evaluate.
+                        </p>
+                      </div>
+
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                        >
+                          Feature Solution
+                        </span>
+
+                        <p style="margin: 0; color: #d0d0d0">
                           A visual dashboard that displays task completion
                           status and progress insights, helping users monitor
                           productivity and stay motivated to complete their
                           goals.
                         </p>
                       </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 order-lg-2 order-1">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/dottolist3.png"
+                        class="glightbox"
+                      >
+                        <img
+                          src="assets/img/portfolio/dottolist3.png"
+                          alt="Progress Dashboard & Tracking screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -392,6 +1024,23 @@
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof GLightbox !== "undefined") {
+          document.querySelectorAll(".glightbox").forEach(function (item) {
+            GLightbox({
+              elements: [
+                {
+                  href: item.getAttribute("href"),
+                  type: "image",
+                },
+              ],
+            });
+          });
+        }
+      });
+    </script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
