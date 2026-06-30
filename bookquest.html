@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Najma - BookQuest</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: SnapFolio
+  * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
+  * Updated: Jul 21 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="portfolio-details-page">
+    <style>
+      body {
+        padding-top: 80px !important;
+      }
+      #header {
+        display: none !important;
+      }
+      .main {
+        margin-left: 0 !important;
+        width: 100% !important;
+      }
+      .portfolio-details .container {
+        max-width: 1180px;
+      }
+      .overview-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .overview-card {
+        height: 100%;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        padding: 22px;
+      }
+      .overview-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #d4af37;
+      }
+      .overview-card p {
+        margin: 0;
+        color: #d0d0d0;
+        font-size: 0.92rem;
+      }
+      .project-info-card,
+      .feature-card,
+      .feature-image-card {
+        background: #202020;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+        border-radius: 14px;
+      }
+      .feature-image-card {
+        padding: 14px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .feature-image-card a {
+        display: block;
+        width: 100%;
+        cursor: zoom-in;
+      }
+      .feature-image-card img {
+        border-radius: 10px;
+        width: 100%;
+      }
+      @media (max-width: 991px) {
+        .overview-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="
+        background: #1a1a1a;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        padding: 15px 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+      "
+    >
+      <div class="container" style="padding-left: 0">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNavbar"
+          style="border: none; filter: invert(1); margin-left: 15px"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="topNavbar">
+          <ul
+            class="navbar-nav me-auto"
+            style="gap: 5px; flex-direction: row; align-items: center"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="index.html"
+                style="
+                  color: #ffffff !important;
+                  font-weight: 500;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 8px 15px 8px 0;
+                "
+              >
+                <i class="bi bi-house"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="index.html#portfolio"
+                style="
+                  color: #a0a0a0 !important;
+                  font-weight: 500;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 8px 15px;
+                "
+              >
+                <i class="bi bi-images"></i> Portfolio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="index.html#resume"
+                style="
+                  color: #a0a0a0 !important;
+                  font-weight: 500;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  padding: 8px 15px;
+                "
+              >
+                <i class="bi bi-file-earmark-text"></i> Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header
+      id="header"
+      class="header dark-background d-flex flex-column justify-content-center"
+    >
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+    </header>
+
+    <main class="main">
+      <!-- Portfolio Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+        <div
+          class="container px-3 px-lg-2"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="row gy-4">
+            <div class="col-lg-4 d-flex">
+              <div
+                class="portfolio-info w-100 project-info-card"
+                data-aos="fade-left"
+                data-aos-delay="250"
+                style="
+                  min-height: 360px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  background: #202020;
+                  border: 1px solid rgba(255, 255, 255, 0.14);
+                  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+                  border-radius: 14px;
+                  padding: 30px;
+                "
+              >
+                <div>
+                  <h3
+                    style="
+                      margin-bottom: 4px;
+                      padding-bottom: 0;
+                      border-bottom: none;
+                    "
+                  >
+                    BookQuest
+                  </h3>
+                  <p
+                    style="
+                      color: #bdbdbd;
+                      font-size: 0.9rem;
+                      margin: 0;
+                      padding-bottom: 12px;
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+                    "
+                  >
+                    Gamified Reading & Quiz
+                  </p>
+                </div>
+                <ul style="margin: 0; padding: 0; list-style: none">
+                  <li><strong>Role :</strong> Product & UI/UX Designer</li>
+                  <li><strong>Team :</strong> 3 Members</li>
+                  <li><strong>Timeline :</strong> May 2026</li>
+                  <li>
+                    <a
+                      href="https://www.figma.com/proto/nhV6iu2rWOH4CuEUkny51P/Butterscotch-Team?node-id=37-689&t=bxGM7CauAxyxM5In-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=37%3A689"
+                      target="_blank"
+                      style="color: #77abf9"
+                      >Try BookQuest Prototype Here</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Project Overview + Info -->
+            <div class="col-lg-8">
+              <div
+                class="portfolio-description h-100"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                style="
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin-bottom: 26px;
+                  "
+                >
+                  Project Overview
+                </h2>
+                <div class="overview-grid">
+                  <div class="overview-card">
+                    <h4>
+                      <i class="bi bi-exclamation-triangle-fill"></i> Problem
+                    </h4>
+                    <p>
+                      Digital reading often feels passive and monotonous,
+                      causing users to lose motivation and struggle to retain
+                      key insights after reading.
+                    </p>
+                  </div>
+                  <div class="overview-card">
+                    <h4><i class="bi bi-people-fill"></i> Target Users</h4>
+                    <p>
+                      High school and college students, book readers,
+                      self-improvement enthusiasts, and lifelong learners.
+                    </p>
+                  </div>
+                  <div class="overview-card">
+                    <h4><i class="bi bi-lightbulb-fill"></i> Solution</h4>
+                    <p>
+                      A digital library app that combines gamified reading,
+                      chapter quizzes, daily quests, and affordable short-term
+                      book lending.
+                    </p>
+                  </div>
+                  <div class="overview-card">
+                    <h4><i class="bi bi-bullseye"></i> Product Goal</h4>
+                    <p>
+                      Make reading more engaging, affordable, and effective by
+                      helping users build consistent habits and understand what
+                      they read.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature Showcase -->
+            <div class="col-lg-12">
+              <div
+                class="features mt-5"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <h2
+                  style="
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin-bottom: 26px;
+                  "
+                >
+                  Feature Showcase
+                </h2>
+                <p
+                  style="color: #bdbdbd; margin-top: -6px; margin-bottom: 28px"
+                >
+                  Each feature was designed based on a specific user pain point
+                  identified during product discovery.
+                </p>
+
+                <!-- Feature 01 -->
+                <div class="row gy-4 align-items-stretch mb-4">
+                  <div class="col-lg-5">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/bookquest1.png"
+                        class="glightbox"
+                        ><img
+                          src="assets/img/portfolio/bookquest1.png"
+                          alt="Gamified Reading Experience screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="400"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-stars"
+                            style="
+                              color: #fff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #fff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                            >01</span
+                          >
+                          <h4 style="margin: 0">Gamified Reading Experience</h4>
+                        </div>
+                      </div>
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                          >Problem</span
+                        >
+                        <p style="margin: 0; color: #d0d0d0">
+                          Readers often lose motivation because digital reading
+                          can feel passive, repetitive, and less rewarding than
+                          other digital entertainment.
+                        </p>
+                      </div>
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                          >Feature Solution</span
+                        >
+                        <p style="margin: 0; color: #d0d0d0">
+                          Users earn XP, level up, complete daily reading
+                          quests, and collect rewards such as gems, making
+                          reading feel more interactive and motivating.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Feature 02 -->
+                <div class="row gy-4 align-items-stretch mb-4">
+                  <div class="col-lg-7 order-lg-1 order-2">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="500"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-patch-question-fill"
+                            style="
+                              color: #fff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #fff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                            >02</span
+                          >
+                          <h4 style="margin: 0">Quiz for Every Chapter</h4>
+                        </div>
+                      </div>
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                          >Problem</span
+                        >
+                        <p style="margin: 0; color: #d0d0d0">
+                          Users often finish reading without fully understanding
+                          or remembering the key insights from each chapter.
+                        </p>
+                      </div>
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                          >Feature Solution</span
+                        >
+                        <p style="margin: 0; color: #d0d0d0">
+                          Each chapter includes interactive quizzes that help
+                          users check comprehension, retain important ideas, and
+                          stay actively engaged with the book.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 order-lg-2 order-1">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/bookquest2.png"
+                        class="glightbox"
+                        ><img
+                          src="assets/img/portfolio/bookquest2.png"
+                          alt="Quiz for Every Chapter screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Feature 03 -->
+                <div class="row gy-4 align-items-stretch">
+                  <div class="col-lg-5">
+                    <div class="feature-image-card">
+                      <a
+                        href="assets/img/portfolio/bookquest3.png"
+                        class="glightbox"
+                        ><img
+                          src="assets/img/portfolio/bookquest3.png"
+                          alt="Affordable 7-Day Book Lending screen"
+                          class="img-fluid"
+                          loading="lazy"
+                          style="border-radius: 10px"
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div
+                      class="feature-item feature-card"
+                      data-aos="fade-up"
+                      data-aos-delay="600"
+                      style="
+                        height: 100%;
+                        background: #202020;
+                        border: 1px solid rgba(255, 255, 255, 0.14);
+                        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+                        border-radius: 14px;
+                        padding: 28px;
+                      "
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-bottom: 24px;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 14px;
+                            background: rgba(255, 255, 255, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                          "
+                        >
+                          <i
+                            class="bi bi-book-half"
+                            style="
+                              color: #fff !important;
+                              font-size: 2rem !important;
+                              line-height: 1 !important;
+                              margin: 0 !important;
+                              padding: 0 !important;
+                              background: transparent !important;
+                              width: auto !important;
+                              height: auto !important;
+                            "
+                          ></i>
+                        </div>
+                        <div>
+                          <span
+                            style="
+                              display: block;
+                              color: #fff;
+                              font-weight: 700;
+                              font-size: 0.85rem;
+                              margin-bottom: 4px;
+                            "
+                            >03</span
+                          >
+                          <h4 style="margin: 0">
+                            Affordable 7-Day Book Lending
+                          </h4>
+                        </div>
+                      </div>
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #d34e3c;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                          margin-bottom: 14px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #d34e3c;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                          >Problem</span
+                        >
+                        <p style="margin: 0; color: #d0d0d0">
+                          Many students face limited access to books because
+                          permanent access or purchasing books can be
+                          financially difficult.
+                        </p>
+                      </div>
+                      <div
+                        style="
+                          background: rgba(255, 255, 255, 0.04);
+                          border-left: 3px solid #589bff;
+                          border-radius: 10px;
+                          padding: 14px 16px;
+                        "
+                      >
+                        <span
+                          style="
+                            display: block;
+                            color: #589bff;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            margin-bottom: 6px;
+                          "
+                          >Feature Solution</span
+                        >
+                        <p style="margin: 0; color: #d0d0d0">
+                          Users can borrow digital book access for affordable
+                          short-term periods starting from 7 days, making books
+                          easier to access without full purchase costs.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Details Section -->
+    </main>
+
+    <footer
+      id="footer"
+      class="footer"
+      style="margin-left: 0; padding-left: 0; width: 100%; text-align: center"
+    >
+      <div class="container">
+        <div class="copyright">
+          <p>© <strong class="px-0 sitename">2026 Najma Noorfitri</strong></p>
+        </div>
+        <div class="credits">
+          Designed by
+          <a
+            href="https://bootstrapmade.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >BootstrapMade</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof GLightbox !== "undefined") {
+          GLightbox({ selector: ".glightbox" });
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof GLightbox !== "undefined") {
+          document.querySelectorAll(".glightbox").forEach(function (item) {
+            GLightbox({
+              elements: [{ href: item.getAttribute("href"), type: "image" }],
+            });
+          });
+        }
+      });
+    </script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
